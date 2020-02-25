@@ -1,10 +1,10 @@
 package edu.elsmancs.ExamenResolucion.domain;
 
-public class CristalExpender {
+public class CrystalExpender {
     private int stock = 0;
     private double itemCost = 50d;
 
-    public CristalExpender(int stock, double itemCost) {
+    public CrystalExpender(int stock, double itemCost) {
         this.stock = stock;
         this.itemCost = itemCost;
     }
@@ -32,4 +32,5 @@ public class CristalExpender {
             this.stock -= 1;
         }catch (Exception e){}
     }
+
 }
