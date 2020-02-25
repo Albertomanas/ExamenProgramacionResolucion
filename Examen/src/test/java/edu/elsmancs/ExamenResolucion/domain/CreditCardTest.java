@@ -22,4 +22,13 @@ public class CreditCardTest {
         assertNotNull(creditCard);
     }
 
+    @Test
+    public void comprobarPagoTest() {
+        CreditCard creditCard = new CreditCard("Abradolf Lincler", "3452234634523457");
+        double delta = 0;
+        assertEquals(creditCard.number(), "3452234634523457");
+        creditCard.pay(500d);
+        assertNotNull(creditCard);
+    }
+
 }
