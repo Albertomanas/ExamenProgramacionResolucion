@@ -33,4 +33,9 @@ public class CrystalExpender {
         }catch (Exception e){}
     }
 
+    @Override
+    public String toString() {
+        return "\n" + "Stock: " + stock() + "\n" +
+                "Cost: " + this.itemCost;
+    }
 }
