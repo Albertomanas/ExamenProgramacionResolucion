@@ -32,7 +32,7 @@ public class UfosPark {
     /*public String getUfoOf(String creditNumber) {
         return getFlota().getOrDefault(creditNumber, );
     }
-
+    * NO ME HA SALIDO ASÍ
      */
 
     public String getUfoOf(String creditNumber) {
@@ -62,12 +62,20 @@ public class UfosPark {
         }
         if (ufosAsignados != numUfos()) {
             return true;
-        }
-        else {
+
+        } else {
             return false;
         }
     }
 
+    private boolean isTarjetaAsignada (CreditCard creditCard) {
+        //Comprobación booleana si está la tarjeta de credito en mapa
+        for (String ufoID : flota.keySet()) {
+            if (flota.get(ufoID) != creditCard) {
+                return true;
+            }
+        }return false;
+    }
 
     private void require(Boolean holds) throws Exception{
         //Booleano que si hold es distinto a lo esperado, salta excepción
