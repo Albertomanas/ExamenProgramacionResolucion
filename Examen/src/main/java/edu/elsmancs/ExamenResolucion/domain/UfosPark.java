@@ -3,7 +3,7 @@ package edu.elsmancs.ExamenResolucion.domain;
 import java.util.HashMap;
 import java.util.Map;
 
-public class UfosPark {
+public class UfosPark implements GuestDispatcher{
 
     private final double fee = 500d;
     /* Implementación de Mapa, tenemos que recorrer el Mapa
