@@ -1,6 +1,6 @@
 package edu.elsmancs.ExamenResolucion.domain;
 
-public class CrystalExpender {
+public class CrystalExpender implements GuestDispatcher {
     private int stock = 0;
     private double itemCost = 50d;
 
