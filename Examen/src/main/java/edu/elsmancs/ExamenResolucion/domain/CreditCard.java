@@ -7,15 +7,14 @@ public class CreditCard {
     private double credit = 3000d;
     private final String SYMBOL = "EZIS";
 
-    private String name= "";
 
     public CreditCard(String name, String number) {
-        this.name = name;
+        this.owner = owner;
         this.number = number;
     }
 
-    public String getName() {
-        return this.name = name;
+    public String getOwner() {
+        return this.owner = owner;
     }
 
     public String number() {
@@ -25,4 +24,5 @@ public class CreditCard {
     public double credit() {
         return this.credit = credit;
     }
+
 }

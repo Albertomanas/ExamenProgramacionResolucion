@@ -6,10 +6,11 @@ import static org.junit.Assert.*;
 
 public class CreditCardTest {
 
+
     @Test
     public void comprobarDatosTarjetaTest() {
         CreditCard creditCard = new CreditCard("Abradolf Lincler", "3452234634523457");
-        assertEquals(creditCard.getName(), "Abradolf Lincler");
+        assertEquals(creditCard.getOwner(), "Abradolf Lincler");
         assertNotNull(creditCard.number(), "3452234634523457");
     }
 
