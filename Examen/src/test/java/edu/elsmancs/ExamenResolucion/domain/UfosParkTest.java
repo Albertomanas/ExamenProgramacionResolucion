@@ -14,6 +14,9 @@ public class UfosParkTest {
      */
     @Test
     public void addUfoTest() {
+        UfosPark ufosPark = new UfosPark();
+        ufosPark.add("dox");
+        assertEquals("dox", null);
     }
 
     /**
