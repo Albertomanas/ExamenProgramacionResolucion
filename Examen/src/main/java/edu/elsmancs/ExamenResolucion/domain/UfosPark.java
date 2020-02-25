@@ -84,24 +84,29 @@ public class UfosPark {
         }
     }
 
-
-    /* Requisitos: ufo libre, tener dinero, y que no hayas pedido otro ufo(credit card sin asignar)
-     *
-     */
-
-    /* public void dispatch(CreditCard creditCard) {
+    public void dispatch(CreditCard creditCard) {
 
         // Barricada try catch para capturar Excepciones
 
         try {
-            // require(isHuecoDisponible());
-            require(creditCard.credit() >= fee);
+            require(isHuecoLibre());
+            require(creditCard.credit() >= fee); // saldo mayor o igual al coste del pack
+            require(isTarjetaAsignada(creditCard)); //Que x ufo no ha recibido ya un pack
+            String ufoDisponibleID = null;
+            for (String ufoID : flota.keySet()) {
+                if (flota.get(ufoID) == null) {
+                    ufoDisponibleID = ufoID;
+                }
+            }
+            this.getFlota().put(ufoDisponibleID, creditCard);
+            creditCard.pay(this.fee);//Cobro del pack
 
         } catch (Exception e){}
-        }
     }
 
-     */
-
+    public String toString() {
+        return "\n" + flota.keySet().toString();
+    }
 
 }
+
