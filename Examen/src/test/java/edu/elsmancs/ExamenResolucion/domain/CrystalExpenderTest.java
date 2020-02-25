@@ -21,7 +21,6 @@ public class CrystalExpenderTest {
         double delta = 0d;
         crystalExpender.dispatch(creditCard);
         assertEquals(2, crystalExpender.stock(), delta);
-        assertEquals(1950, creditCard.credit(), delta);
+        assertEquals(2950, creditCard.credit(), delta);
     }
-
 }
